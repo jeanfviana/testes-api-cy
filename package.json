@@ -4,18 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npx cypress run",
     "start": "npx serverest",
     "cy:run": "npx cypress run",
     "cy:report": "npx mochawesome-merge .\\mochawesome-report\\mochawesome*.json  > mochawesome-report\\report.json && npx marge mochawesome-report\\report.json",
-    "start-server" : " npm start " ,
-    "ci" : " start-server-and-test start-server http://localhost :8080 teste "
+    "start-server": "npm start",
+    "ci":" start-server-and-test start-server http://localhost :8080 teste"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.5.0"
+    "cypress": "^13.5.0",
+    "start-server-and-test": "^2.0.3"
   },
   "dependencies": {
     "cypress-multi-reporters": "^1.5.0",
