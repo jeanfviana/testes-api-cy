@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx serverest",
     "cy:run": "npx cypress run",
-    "cy:report": "npx mochawesome-merge .\\mochawesome-report\\mochawesome*.json  > mochawesome-report\\report.json && npx marge mochawesome-report\\report.json"
+    "cy:report": "npx mochawesome-merge .\\mochawesome-report\\mochawesome*.json  > mochawesome-report\\report.json && npx marge mochawesome-report\\report.json",
     "start-server" : " npm start " ,
     "test" : " mocha e2e-spec.js " ,
-    "ci" : " start-server-and-test start-server http://localhost :8080 teste "
+    "ci" : " start-server-and-test start-server http://localhost :8080 teste ",
   },
   "keywords": [],
   "author": "",
