@@ -25,6 +25,11 @@ cd testes-api-cy
 npm install 
 ```
 
+#### Para instalar o Http server
+```
+npm install http-server -g
+```
+
 #### Para subir o servidor:
 ```
 npm start

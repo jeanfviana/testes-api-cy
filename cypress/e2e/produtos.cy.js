@@ -4,7 +4,7 @@ import contrato from '../contracts/produtos.contract'
 describe('Testes da Funcionalidade Produtos', () => {
     let token
     before(() => {
-        cy.token('beltrano@qa.com.br', 'teste').then(tkn => { token = tkn })
+        cy.token('fulano@qa.com', 'teste').then(tkn => { token = tkn })
     });
 
     it('Deve validar contrato de produtos', () => {
@@ -44,7 +44,7 @@ describe('Testes da Funcionalidade Produtos', () => {
     });
 
     it('Deve validar mensagem de erro ao cadastrar produto repetido', () => {
-        cy.cadastrarProduto(token, 'Produto EBAC Novo 1', 250, "Descrição do produto novo", 180)
+        cy.cadastrarProduto(token, 'Logitech MX Vertical', 470, "Mouse", 381)
             .then((response) => {
                 expect(response.status).to.equal(400)
                 expect(response.body.message).to.equal('Já existe produto com esse nome')
@@ -60,7 +60,7 @@ describe('Testes da Funcionalidade Produtos', () => {
                 headers: {authorization: token}, 
                 body: 
                 {
-                    "nome": "Produto Editado 45642083",
+                    "nome": "Produto Editado 4564208",
                     "preco": 100,
                     "descricao": "Produto editado",
                     "quantidade": 100
